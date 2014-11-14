@@ -62,11 +62,12 @@ class GetWordListCommand extends Command{
         $database = $input->getOption('database');
         $min = $input->getOption('min');
         $limit = $input->getOption('limit');
-        
+
         $couch = new CouchDb(array("url" => $host, "database" => $database));
         $view_url = $couch->getViewUrl($design,
                                        $view, 
                                array("group"=> "true",
+                                     "stale"=>"update_after",
                                      "startkey" => '['.$min.',"*"]'
                                 ));
         $raw = file_get_contents($view_url);
