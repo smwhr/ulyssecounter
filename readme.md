@@ -21,17 +21,38 @@ Enregistrez la vue sous le design `mydesign` avec le nom `myview` (ou les noms d
 Usage
 =====
 
-    ./console data:send swann.txt
+    $ ./console data:send swann.txt
+     1038861/1038861 [============================] 100%
+    Done !
+    Your final data should be ready in a minute or two.
+
+ou
+    
+    $ php ./console data:send swann.txt
 
 Si votre base de donnée est hébergée sur un autre host que `127.0.0.1:5984` ou si son nom n'est pas `ulyssecounter`
 
-    ./console data:send swann.txt --host="http://1.1.1.1:1111" --database="swanncounter"
+    $ ./console data:send swann.txt --host="http://1.1.1.1:1111" --database="swanncounter"
 
 Vérifiez que le processus d'indexation s'est bien terminé via l'admin de couch `http://127.0.0.1:5984/_utils/status.html`
 
 Puis lancez votre requête
     
-    ./console words:top mydesign myview --min=13 --limit=10
+    $ ./console words:top mydesign myview --min=13 --limit=10
+    +------------------+-----------+
+    | Mot              | Occurence |
+    +------------------+-----------+
+    | reconnaissance   | 25        |
+    | naturellement    | 23        |
+    | roussainville    | 19        |
+    | extraordinaire   | 18        |
+    | immédiatement    | 17        |
+    | habituellement   | 17        |
+    | photographies    | 17        |
+    | malheureusement  | 16        |
+    | signification    | 15        |
+    | particulièrement | 14        |
+    +------------------+-----------+
 
 avec éventuellement les paramètres `--host` et `--database` si ils sont nécessaires.
 
