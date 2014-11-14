@@ -33,7 +33,7 @@ Puis lancez votre requête
     
     ./console words:top mydesign myview --min=13 --limit=10
 
-avec éventuellement les paramètres `--host` et `--database` si ils sont
+avec éventuellement les paramètres `--host` et `--database` si ils sont nécessaires.
 
 Limites
 =======
