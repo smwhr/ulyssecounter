@@ -56,6 +56,8 @@ Puis lancez votre requête
 
 avec éventuellement les paramètres `--host` et `--database` si ils sont nécessaires.
 
+*note* : Toutes les queries sont faites avec le paramètre "stale=update_after", ce qui vous permet d'avoir des résultats (non-exacts) immédiatement, sans attendre la fin du processing.
+
 Limites
 =======
 
