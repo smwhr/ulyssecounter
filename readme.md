@@ -34,7 +34,7 @@ Si votre base de donnée est hébergée sur un autre host que `127.0.0.1:5984` o
 
     $ ./console data:send swann.txt --host="http://1.1.1.1:1111" --database="swanncounter"
 
-Vérifiez que le processus d'indexation s'est bien terminé via l'admin de couch `http://127.0.0.1:5984/_utils/status.html`
+Vous pouvez surveiller le processus d'indexation via l'admin de couch `http://127.0.0.1:5984/_utils/status.html`
 
 Puis lancez votre requête
     
