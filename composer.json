@@ -1,0 +1,21 @@
+{
+    "name": "supinternet/ulyssecounter",
+    "description": "Exercice avec CouchDb",
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/console": "2.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anne Onyme",
+            "email": "supinternet@smwhr.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": {
+            "UlysseCounter": "src/"
+        }
+    }
+}
